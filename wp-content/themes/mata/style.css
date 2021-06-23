@@ -1,0 +1,398 @@
+/*
+Theme Name: Primeiro Plano
+Version: 2021
+Author: Saulo Padilha
+Author URI: spadilha.com
+*/
+
+
+/* =====================================================================================
+    RESET
+===================================================================================== */
+/* apply a natural box layout model to all elements */
+* {margin: 0; padding: 0; border: 0; vertical-align: baseline; background:transparent; outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* =====================================================================================
+    BODY
+===================================================================================== */
+body {
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html {font-size: 10px;}
+
+body {font-family: 'Barlow', sans-serif; font-size: 1.6rem; font-weight: 300; color:#ffffff; line-height:1; background: #1a1a1b; background-attachment: fixed; background-size: cover;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {display: block;}
+audio, canvas, progress, video {display: inline-block; vertical-align: baseline;}
+
+button, input, select, textarea {font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 1.8rem; letter-spacing: 1px; color: #ffffff; padding: 0; border: 0;}
+textarea {overflow: auto; line-height: 17px;}
+
+::-webkit-input-placeholder {color: #333; font-weight:300;}
+:-moz-placeholder {color: #333; font-weight:300;}
+::-moz-placeholder {color: #333; font-weight:300;}
+:-ms-input-placeholder {color: #333; font-weight:300;}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+strong {font-weight: 800;}
+
+p {font-size: 2.1rem; line-height: 1.4;}
+
+a {text-decoration:none; color:#ffffff;
+    -webkit-transition:all 0.2s linear 0s;
+    -moz-transition:all 0.2s linear 0s;
+    -o-transition:all 0.2s linear 0s;
+    transition:all 0.2s linear 0s;
+    cursor: pointer;
+}
+a:hover {color: #991f27; text-decoration: none;}
+
+
+table {border-collapse: collapse; margin: 15px 0;}
+table th, table td {padding: 5px; border: 1px solid #000;}
+
+h1, h2, h3 {font-family: 'Barlow Condensed', sans-serif; font-weight:600;}
+
+
+.wrapper {width: 100%; max-width: 1126px; margin: 0 auto; position: relative;}
+
+.row {width: 100%; float: left; clear: left; position: relative;}
+
+.col {width:47%; float:left;}
+.col:last-child {float:right;}
+
+.col-4 {width: 24%; float: left;}
+
+
+.flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+}
+
+
+.fitvidz {width: 100%; float: left; clear: left;}
+.fitvidz iframe {width: 100%; height: auto;}
+
+
+/* =====================================================================================
+    HEADER
+===================================================================================== */
+#header {width: 100%; height: 66px; line-height: 66px; background-color: #1a1a1b; position: fixed; left: 0; top: 0; z-index: 999;}
+
+#menuIcon {display: none;}
+/* =====================================================================================
+    MENU
+===================================================================================== */
+#menu {width: 100%; height: 66px; line-height: 66px; background-color: #1a1a1b; text-align: center; position: absolute; left: 0; top: 0;}
+#menu ul {width: 100%; list-style: none;}
+#menu ul li {font-family: 'Barlow Condensed', sans-serif; font-weight:600; height: 66px; line-height: 66px; margin:0 33px; display: inline-block;}
+
+#menu ul li a {font-size: 2.2rem; font-weight: 600; color: #ffffff; text-transform: uppercase;}
+#menu ul a:hover, #menu ul li a.active {color: #991f27;}
+
+
+
+
+/* =====================================================================================
+    CARTAZ/ABERTURA
+===================================================================================== */
+#cartaz {width:100%; height: calc(100vh - 66px); position:relative; z-index: 20; overflow: hidden; margin-top: 66px; background: url('images/bg_abertura.jpg') center center no-repeat;}
+
+#cartaz video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+#cartaz .inner {width: 100%; height: 100%; text-align: center; align-items: center; justify-content: center; position: relative; z-index: 10;}
+#cartaz h1 svg {width: 80%; max-width: 900px; height: auto;}
+
+
+
+/* =====================================================================================
+   SECTIONS
+===================================================================================== */
+.section {padding: 200px 0;}
+
+
+/* O FILME  */
+#o-filme .wrapper {max-width: 906px;}
+#o-filme p { margin-bottom: 80px; }
+
+
+/* FESTIVAIS */
+#festivais .flexbox {justify-content: space-around; align-items: center; justify-items: center;}
+#festivais a {width: 22%; text-align: center; margin:40px 0;}
+
+
+/* REPORTAGENS */
+#reportagens .item {width: 31%; margin-bottom: 100px;}
+#reportagens h3 {font-size: 2.1rem; font-weight: 900; line-height: 1.3; color: #ffffff; position: relative; float: left; clear: left;
+    -webkit-transition:all 0.2s linear 0s;
+    -moz-transition:all 0.2s linear 0s;
+    -o-transition:all 0.2s linear 0s;
+    transition:all 0.2s linear 0s;
+}
+#reportagens h3:after {content: ""; width: 68px; height: 1px; background-color: #991f27; border-top: 1px solid #991f27; position: absolute; left: 0; bottom: -15px;}
+
+#reportagens p {font-weight: 400;}
+
+#reportagens img {width: 100%; height: auto; float: left; clear: left; margin-bottom: 10px;
+    -webkit-transition:all 0.1s linear 0s;
+    -moz-transition:all 0.1s linear 0s;
+    -o-transition:all 0.1s linear 0s;
+    transition:all 0.1s linear 0s;
+}
+#reportagens a:hover img {opacity: 0.5;}
+#reportagens a:hover h3 {color: #991f27;}
+
+
+
+/* IMPRENSA */
+#imprensa {padding: 80px 0 0;}
+#imprensa p {font-size: 2.1rem; font-weight: 500; line-height: 1.3; color: #ffffff; text-transform: uppercase; padding-bottom:80px; text-align: center;}
+#imprensa p a {text-decoration: underline;}
+#imprensa .item {width: 31%; margin-bottom: 100px;}
+#imprensa .item img {width: 100%; height: auto;}
+
+
+
+/* =====================================================================================
+    CONTACT FORM 7 GERAL
+===================================================================================== */
+.ajax-loader {width: 24px; height: 24px; background: url('images/loading.svg') center center no-repeat; display: inline-block; visibility: hidden; margin:26px 10px 0 0; float: right;}
+.submitting .ajax-loader {visibility: visible;}
+
+.wpcf7-not-valid, .file-not-valid {background:url('images/ico_form_error.png') right 8px center no-repeat transparent;}
+.wpcf7-not-valid-tip {display:none;}
+
+.wpcf7 form.wpcf7-response-output {width:100%; font-size: 1.5rem; line-height: 1.3; float:left; clear: left; margin-top:20px; display: block;}
+
+.wpcf7 form.init .wpcf7-response-output,
+.wpcf7 form.resetting .wpcf7-response-output,
+.wpcf7 form.submitting .wpcf7-response-output {
+    display: none;
+}
+
+
+
+.wpcf7-mail-sent-ok {color:#368F6F;}
+.wpcf7-validation-errors {color:#C90101;}
+
+.screen-reader-response {display:none;}
+
+
+.form-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+    /*align-items: center;*/
+    margin-bottom: 6px;
+}
+.wpcf7-form-control-wrap {width: calc(100% - 110px);}
+
+/* LABEL PADRÃO */
+.form-row label {width: 100px; height: 40px; line-height: 40px; font-size: 1.9rem; font-weight: 300; letter-spacing: 1px;}
+/* LABEL MAIOR */
+.form-row.large-label label {width: 180px;}
+.form-row.large-label .wpcf7-form-control-wrap {width: calc(100% - 190px);}
+
+
+/* INPUT TEXT PADRÃO */
+.form-row .wpcf7-text, .form-row .wpcf7-textarea {width: 100%; height: 40px; line-height: 41px; font-size: 1.5rem; font-weight: 500; color: #491c18; border: 1px solid #491c18; padding: 0 10px;}
+
+.form-row .wpcf7-textarea {height: 150px; line-height: 1.2; padding: 10px;}
+
+/* DATA */
+.form-row  .wpcf7-date {width: 226px; height: 40px; line-height: 41px; font-size: 1.9rem; font-weight: 500; text-transform: uppercase; color: #491c18; border: 1px solid #491c18; padding: 0 10px;}
+
+/* SELECT */
+
+.form-row  .wpcf7-select {width: 306px; height: 40px; line-height: 41px; font-size: 1.9rem; font-weight: 500; text-transform: uppercase; color: #491c18; border: 1px solid #491c18; padding: 0 10px; background: url('images/ico_select-arrow.svg') center right 10px no-repeat transparent;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+
+
+/* RADIO / CHECKBOX */
+.form-radio {margin-top: 40px;}
+.form-radio label {width: 100%; padding-bottom: 20px;}
+
+.form-radio .wpcf7-form-control-wrap {padding-bottom: 40px;}
+.form-radio .wpcf7-list-item {margin: 0 15px 0 10px;}
+.form-radio .wpcf7-list-item label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-radio .wpcf7-list-item input {opacity: 0;}
+.form-radio .wpcf7-list-item-label {font-size: 1.8rem; padding-left: 10px; position: relative;}
+.form-radio .wpcf7-list-item-label:before {content:''; width: 22px; height: 22px; border: 1px solid #491c18; border-radius: 50%; position: absolute; top: 5px; left: -23px; }
+.form-radio .wpcf7-list-item-label:after {content:''; width: 14px; height: 14px; border-radius: 50%; position: absolute; top: 10px; left: -18px; background-color: transparent; }
+.form-radio .wpcf7-list-item input:checked ~ .wpcf7-list-item-label:after {
+  background-color: #491c18;
+}
+
+
+/* SUBMIT BUTTON */
+.form-submit {position: relative;}
+.wpcf7-submit {width: 100%; max-width: 218px; font-size: 1.4rem; font-weight: bold; color: #e1e1e1; text-transform: uppercase; background-color:#491c18; padding: 6px 15px; margin-top: 15px; cursor: pointer;
+
+    background: -webkit-linear-gradient(left, #fdce16 50%, #491c18 50%) right bottom no-repeat;
+    background: -o-linear-gradient(left, #fdce16 50%, #491c18 50%) right bottom no-repeat;
+    background: linear-gradient(to right, #fdce16 50%, #491c18 50%) right bottom no-repeat;
+    background-size: 201% 100%;
+
+    -webkit-transition:all 0.1s linear 0s;
+    -moz-transition:all 0.1s linear 0s;
+    -o-transition:all 0.1s linear 0s;
+    transition:all 0.1s linear 0s;
+
+}
+.wpcf7-submit:hover {
+    color: #e1e1e1;
+    background-color: #fdce16;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, #fdce16 50%, #491c18 50%) left bottom no-repeat;
+    background-size: 201% 100%;
+}
+/* HIDE GOOGLE RECAPTCHA BADGE*/
+small.grecaptchamsg {font-size: 1.1rem; position: absolute; right: 16px; bottom: 16px; text-align: right;}
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+
+
+
+/* ======================================================================================================
+    Footer
+====================================================================================================== */
+#footer {height: 300px; background-color: #192632;}
+#footer .wrapper {height: 300px;}
+
+#footer .parceiros {max-width: calc(100% - 300px); height: auto; position: absolute; left: 0; bottom: 40px;}
+
+#footer .logo {width: 156px; height: auto; position: absolute; right: 0; bottom: 40px;}
+
+
+
+
+/* ========================================================================================================
+    PRE DEFINED CLASSES
+======================================================================================================== */
+/*
+REMOVING GOOGLE ADDS IFRAME HEIGHT ISSUE
+http://stackoverflow.com/questions/18467529/google-remarketing-tag-iframe-height-issue
+*/
+iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+}
+iframe[id^="oauth2relay"] { position: fixed !important; }
+
+
+#escondido {display: none;}
+
+/*  MY CLASSES */
+.img-full {width: 100%; height: auto;}
+
+.noMargin {margin: 0 !important;}
+
+.hidden {display: none;}
+.bold {font-weight:bold;}
+.italic {font-style:italic;}
+.underline {text-decoration:underline;}
+.asLink {cursor:pointer;}
+
+.fLeft {float:left;}
+.fRight {float:right;}
+
+.cLeft {clear:left;}
+.cRight {clear:right;}
+
+.aCenter {text-align:center;}
+
+.alignnone {margin: 10px 0 20px;}
+.aligncenter {display: block; margin:15px auto;}
+
+.alignnone {max-width: 100% !important; height: auto; margin:15px 0;}
+
+.aligncenter, .aligncenter img {max-width: 100% !important; height: auto; margin:15px auto;}
+
+.alignright {float:right; margin:0 0 25px 25px; clear: right; max-width: 340px; height: auto;}
+.alignleft {float:left; margin:0 25px 25px 0; clear: left; max-width: 340px; height: auto;}
+
+.wp-caption img {width: 100%; height: auto;}
+
+.invisible {visibility:hidden;}
+
+.relative {position:relative;}
+
+/*
+#banners {width:100%;  height: calc(100vh - 66px); position:relative; z-index: 20; float:left; clear:left; opacity: 0; overflow: hidden;
+    -webkit-transition:opacity 1s ease;
+    -moz-transition:opacity 1s ease;
+    -o-transition:opacity 1s ease;
+    transition:opacity 1s ease;
+}
+#banners.active {opacity: 1;}
+#banners .slick-slider {width:100%; height:100%; float:left; clear:left;}
+#banners .slick-track, #banners .slick-list {height: 100%;}
+
+
+#banners .slick-slide {background-size: cover; background-position: center center; position:relative;}
+#banners .slick-slide a {width:100%; height:100%; float:left; clear:left;}
+#banners .slick-slide img {width:100%; height:auto; float: left; clear: left;}
+
+
+#banners #slickDotsWrapper {width:100%; height:20px; position:absolute; left:0; bottom:20px;}
+#banners .slick-dots {width:100%; height: 2px; text-align:center; position:absolute; left:0; bottom:20px; z-index:99;}
+#banners .slick-dots li {list-style:none; display:inline-block; margin:0 12px;}
+#banners .slick-dots li button { display:block; width:40px; height:2px; background-color:rgba(235,235,235,0.4); cursor:pointer; text-indent:-9999px; border:0;
+
+    -webkit-transition:background 0.2s linear;
+    -moz-transition:background 0.2s linear;
+    -o-transition:background 0.2s linear;
+    transition:background 0.2s linear;
+}
+#banners .slick-dots li button:hover {background-color:rgba(235,235,235,1);}
+#banners .slick-dots li.slick-active button, #slide-list li.slick-active button:hover {background-color:rgba(235,235,235,1);}*/

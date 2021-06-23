@@ -1,0 +1,146 @@
+
+/* ========================================================================================================
+    RESPONSIVE
+======================================================================================================== */
+
+@media only screen and (max-width: 1186px ) {
+	.wrapper {max-width: 100%; padding: 0 20px;}
+
+
+	#footer .parceiros {max-width: calc(100% - 300px); left: 20px;}
+
+	#footer .logo {right: 20px;}
+
+
+}
+
+@media only screen and (max-width: 880px ) {
+
+	#festivais a, #reportagens .item, #imprensa .item {width: 48%;}
+
+
+	#footer .parceiros {max-width: calc(100% - 60px); left: 20px;}
+
+	#footer .logo {right: 50%; margin-right: -78px; bottom: 185px;}
+
+
+}
+
+@media only screen and (max-width: 767px ) {
+
+	#cartaz video {display: none;}
+
+	#menu {width: auto; height:auto; left: auto; right: 0; top: 66px; display: none;}
+	#menu.opened {display: block;}
+
+	#menu ul li {float: right; clear: right;}
+
+	/* MENU ICON */
+    #menuIcon {position: absolute; right: 20px; top:6px; z-index: 105; display: block;}
+
+	/* HAMBURGER */
+	.hamburger {width: 36px; height: 54px; position: absolute; right:0px; top:0px; z-index:105; font-size: 0; text-indent: -9999px; -webkit-appearance: none; box-shadow: none; border-radius: 0; border: none; cursor: pointer; opacity:0.8; float:none; display: block;  overflow: hidden; margin: 0; padding: 0;
+	    -webkit-transition: all 0.2s ease-in-out;
+	    -moz-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    -ms-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out; }
+
+	.hamburger:hover { opacity:1;}
+	.hamburger.hidden {opacity:0;}
+	.hamburger:focus {outline: none;}
+
+	.hamburger span {width: 100%; height: 3px; position: absolute; top: 25px; left: 0; right: 0; display: block; background-color: #fff;}
+	.hamburger span::before,
+	.hamburger span::after {content: ""; width: 100%; height: 3px; position: absolute; left: 0; display: block; background-color: #fff;}
+
+	.hamburger.is-active span, .hamburger.is-active span::before, .hamburger.is-active span::after {background-color: #fff;}
+	.hamburger span::before {top: -9px;}
+	.hamburger span::after {bottom: -9px;}
+
+	.hamburger-rotate {background-color:transparent;}
+	.hamburger-rotate span {transition: background 0s 0s;}
+	.hamburger-rotate span::before,
+	.hamburger-rotate span::after {
+	    -webkit-transition-duration: 0.3s, 0.3s;
+	    -moz-transition-duration: 0.3s, 0.3s;
+	    -o-transition-duration: 0.3s, 0.3s;
+	    -ms-transition-duration: 0.3s, 0.3s;
+	    transition-duration: 0.3s, 0.3s;
+	    -webkit-transition-delay: 0.3s, 0s;
+	    -moz-transition-delay: 0.3s, 0s;
+	    -o-transition-delay: 0.3s, 0s;
+	    -ms-transition-delay: 0.3s, 0s;
+	    transition-delay: 0.3s, 0s;
+	}
+	.hamburger-rotate span::before {
+	    -webkit-transition-property: top, transform;
+	    -moz-transition-property: top, transform;
+	    -o-transition-property: top, transform;
+	    -ms-transition-property: top, transform;
+	    transition-property: top, transform;
+	}
+	.hamburger-rotate span::after {
+	    -webkit-transition-property: bottom, transform;
+	    -moz-transition-property: bottom, transform;
+	    -o-transition-property: bottom, transform;
+	    -ms-transition-property: bottom, transform;
+	    transition-property: bottom, transform;
+	}
+	.hamburger-rotate.is-active {
+	    background-color: transparent;
+	}
+	.hamburger-rotate.is-active span {
+	    background: none;
+	}
+	.hamburger-rotate.is-active span::before {
+	    top: 0;
+	    -webkit-transform: rotate(45deg);
+	    -moz-transform: rotate(45deg);
+	    -o-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	}
+	.hamburger-rotate.is-active span::after {
+	    bottom: 0;
+	    -webkit-transform: rotate(-45deg);
+	    -moz-transform: rotate(-45deg);
+	    -o-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	    transform: rotate(-45deg);
+	}
+	.hamburger-rotate.is-active span::before,
+	.hamburger-rotate.is-active span::after {
+	    -webkit-transition-delay: 0s, 0.3s;
+	    -moz-transition-delay: 0s, 0.3s;
+	    -o-transition-delay: 0s, 0.3s;
+	    -ms-transition-delay: 0s, 0.3s;
+	    transition-delay: 0s, 0.3s;
+	}
+
+
+}
+
+
+
+/* MENOR QUE iPad Mini */
+@media only screen and (max-width: 630px ) {
+
+	#festivais a, #reportagens .item, #imprensa .item {width: 100%;}
+
+}
+
+
+/* MENOR QUE iPHONE 6 */
+@media only screen and (max-width: 374px ) {
+
+
+
+}
+
+/* iPHONE 4 */
+@media only screen and (max-width: 330px ) {
+
+	#header .logo img {max-width: 160px; height: auto;}
+
+}
