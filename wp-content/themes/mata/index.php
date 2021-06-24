@@ -364,10 +364,25 @@ jQuery(document).ready(function($) {
 
 			video = $('#cartaz video');
 
+
+			console.log(video[0].readyState);
+
+			if (video[0].readyState !== 4) {
+				setTimeout( function() {App.resizeVideo()}, 50);
+				return;
+			}
+
+
+			// Defer the size update if the video has not yet loaded
+			// if (!elem[0].complete && elem[0].readyState !== 4) {
+			// 	setTimeout(updateSize, 50);
+			// 	return;
+			// }
+
 			var winHeight = $(window).height(),
 			winWidth = $(window).width();
 
-			console.log('videoWidth: ', video[0].offsetWidth, 'winWidth: ', winWidth);
+			// console.log('videoWidth: ', video[0].offsetWidth, 'winWidth: ', winWidth);
 
 
 

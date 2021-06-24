@@ -118,7 +118,7 @@ h1, h2, h3 {font-family: 'Barlow Condensed', sans-serif; font-weight:600;}
 /* =====================================================================================
     CARTAZ/ABERTURA
 ===================================================================================== */
-#cartaz {width:100%; height: calc(100vh - 66px); position:relative; z-index: 20; overflow: hidden; margin-top: 66px; background: url('images/bg_abertura.jpg') center center no-repeat;}
+#cartaz {width:100%; height: calc(100vh - 66px); position:relative; z-index: 20; overflow: hidden; margin-top: 66px; background: url('images/bg_abertura3.jpg') center center no-repeat; background-size: cover;}
 
 #cartaz video {
     position: absolute;

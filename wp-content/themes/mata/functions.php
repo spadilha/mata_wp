@@ -39,45 +39,11 @@ require_once('functions/sanitize.php');
 
 
 
-/************* MUDA POST PARA NOTÍCIAS  *********************/
-
-function change_post_menu_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Notícias';
-    $submenu['edit.php'][5][0] = 'Todas Notícias';
-    $submenu['edit.php'][10][0] = 'Adicionar Notícia';
-    echo '';
+/************* REMOVE POST FROM ADMIN *********************/
+add_action('admin_menu','remove_default_post_type');
+function remove_default_post_type() {
+    remove_menu_page('edit.php');
 }
-function change_post_object_label() {
-        global $wp_post_types;
-        $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'Notícias';
-        $labels->singular_name = 'Notícia';
-        $labels->add_new = 'Adicionar Notícia';
-        $labels->add_new_item = 'Adicionar Notícia';
-        $labels->edit_item = 'Editar Notícia';
-        $labels->new_item = 'Notícia';
-        $labels->view_item = 'Ver Notícia';
-        $labels->search_items = 'Procurar Notícias';
-        $labels->not_found = 'Nenhuma Notícia encontrada';
-        $labels->not_found_in_trash = 'Nenhuma Notícia encontrada na lixeira';
-}
-add_action( 'init', 'change_post_object_label' );
-add_action( 'admin_menu', 'change_post_menu_label' );
-
-
-/************* MUDA ÍCONE DE POSTS/NOTÍCIAS *********************/
-function ccd_menu_news_icon() {
-  global $menu;
-  foreach ( $menu as $key => $val ) {
-    if ( __( 'News') == $val[0] ) {
-      $menu[$key][6] = 'dashicons-welcome-write-blog';
-    }
-  }
-}
-add_action( 'admin_menu', 'ccd_menu_news_icon' );
-
 
 
 /************* CUSTOM EXCERPT *************/
