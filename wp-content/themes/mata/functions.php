@@ -27,7 +27,7 @@ if( function_exists('acf_add_options_page') )
 
 
 /************* THUMBNAIL SIZE OPTIONS *********************/
-add_image_size( 'square', 356, 356, true);
+add_image_size( 'festival', 171, 129, true);
 
 
 /************* CALL CORE FUNCTIONS *********************/
@@ -73,6 +73,17 @@ function override_mce_options($initArray) {
     return $initArray;
 }
 add_filter('tiny_mce_before_init', 'override_mce_options');
+
+
+add_action('admin_head', 'my_custom_fonts');
+
+function my_custom_fonts() {
+  echo "<style>
+    .acf-repeater .acf-row:nth-child(odd) .acf-row-handle.order { background-color: #c16868; color:#fff;}
+
+  </style>";
+}
+
 
 
 ?>

@@ -164,18 +164,25 @@
 
 
 <?php // O FILME
-	$filme = new WP_Query(array('post_type' => 'page', 'p' => 5));
-	if ($filme->have_posts()): while ($filme->have_posts()) : $filme->the_post();
+	$filme = get_field('ofilme', 'options');;
+	if($filme):
 ?>
-
 <section id="o-filme" class="row section">
 	<div class="wrapper">
 		<div class="row">
-			<?php the_content(); ?>
+			<?= $filme ?>
 		</div>
 	</div>
 </section>
 
+<?php endif; ?>
+
+
+
+<?php // TRAILLER
+	$trailler = get_field('trailler', 'options');;
+	if($trailler):
+?>
 <section id="trailer" class="row">
 
 	<div class="trailer-wrapper fitvidz">
@@ -183,10 +190,7 @@
 	</div>
 </section>
 
-<?php endwhile; endif; ?>
-
-<?php wp_reset_query(); ?>
-
+<?php endif; ?>
 
 
 
@@ -196,8 +200,6 @@
 
 	if($festivais):
 ?>
-
-
 <section id="festivais" class="row section">
 	<div class="wrapper">
 
@@ -218,19 +220,14 @@
 	</div>
 </section>
 
-
 <?php endif; ?>
 
 
 
 <?php
-
 	$reportagens = get_field('reportagens', 'options');
-
 	if($reportagens):
 ?>
-
-
 <section id="reportagens" class="row section">
 	<div class="wrapper">
 
@@ -265,30 +262,31 @@
 
 			<?php } ?>
 
+			<div class="item fake"></div>
+
 		</div>
 
 
 	</div>
 </section>
 
-
 <?php endif; ?>
 
 
 
-
-
-
 <?php
-
 	$imprensa = get_field('imagem_alta', 'options');
 
-	if($imprensa):
+	if($imprensa){
 ?>
 <section id="imprensa" class="row section">
 	<div class="wrapper">
 
-		<p><a href="#" target="_blank">Baixe aqui</a> nosso press kit e as fotos em alta definição do filme.</p>
+		<?php $presskit = get_field('presskit', 'options'); if($presskit){ ?>
+
+			<p><a href="<?= $presskit ?>" target="_blank">Baixe aqui</a> nosso press kit e as fotos em alta definição do filme.</p>
+
+		<?php } ?>
 
 		<div class="row flexbox">
 
@@ -296,19 +294,27 @@
 				foreach ($imprensa as $item) {
 
 					$img = $item['imagem'];
-			?>
-				<?php if($img){ ?>
-					<a class="item" href="<?= $img['url'] ?>" target="_blank" download><img src="<?= $img['sizes']['thumbnail'] ?>" alt=""></a>
-				<?php } ?>
 
-			<?php } ?>
+					if($img){
+						$url = $img['url'];
+
+						if(array_key_exists('sizes', $img)){
+							$thumb = $img['sizes']['thumbnail'];
+					?>
+
+						<a class="item" href="<?= $url ?>" target="_blank" download><img src="<?= $thumb ?>" alt=""></a>
+
+			<?php } } } ?>
+
+			<div class="item fake"></div>
 
 		</div>
 
 	</div>
 </section>
 
-<?php endif ?>
+<?php } ?>
+
 
 <?php get_footer(); ?>
 
